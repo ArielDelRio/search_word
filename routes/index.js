@@ -4,8 +4,8 @@ var renderToString = require("react-dom/server").renderToString;
 var search_word = require("../controller/search_word.controller");
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index", { name: "Express" });
+router.get("/test", function (req, res, next) {
+  res.json({ message: "ok" }).status(200);
 });
 
 router.get("/search", search_word);
