@@ -1,6 +1,5 @@
 var express = require("express");
 var router = express.Router();
-var renderToString = require("react-dom/server").renderToString;
 var search_word = require("../controller/search_word.controller");
 
 /* GET home page. */
