@@ -49,7 +49,7 @@ const combinations = (characters) => {
 module.exports = (req, res) => {
   const spellCheck = getSpellCheck();
   console.log("nspell started")
-  let arrayOfLetter = {...req.query.letterInputs} || [];
+  let arrayOfLetter = req.query.letterInputs;// || [];
   
   console.log('request queries', req.query);
   console.log('query letterInputs', req.query.letterInputs);
