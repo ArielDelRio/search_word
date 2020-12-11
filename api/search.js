@@ -50,6 +50,7 @@ module.exports = (req, res) => {
   const spellCheck = getSpellCheck();
   console.log("nspell started")
   const arrayOfLetter = req.query.letterInputs || [];
+  console.log('array of letter', arrayOfLetter);
 
   let response = [];
 
@@ -62,7 +63,7 @@ module.exports = (req, res) => {
   });
 
   let result = {};
-
+  console.log('words', response);
   response.forEach((word) => {
     const obj = result[word.length];
     if (!obj) {
@@ -71,11 +72,12 @@ module.exports = (req, res) => {
       obj.words.push(word);
     }
   });
-  console.log(result);
+  
 
   result = Object.keys(result)
     .sort()
     .map((k) => result[k]);
 
+  console.log('result', result);
   res.send(result);
 };
