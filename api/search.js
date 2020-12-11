@@ -50,10 +50,12 @@ module.exports = (req, res) => {
   const spellCheck = getSpellCheck();
   console.log("nspell started")
   let arrayOfLetter = req.query.letterInputs || [];
+  const object = {...req.query};
   console.log('request queries', req.query);
   console.log('query letterInputs', req.query.letterInputs);
+  arrayOfLetter = object.letterInputs;
   console.log('array of letter', arrayOfLetter);
-  arrayOfLetter = ['a','s','d','m'];
+  
 
   let response = [];
 
