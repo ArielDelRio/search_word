@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "functions": {
+    "api/test.js": {
+      "memory": 128,
+      "maxDuration": 2
+    },
+    "api/search.js": {
+      "memory": 1024,
+      "maxDuration": 10,
+      "includeFiles": "dicts/*.*"
+    }
+  }
+}
